@@ -7,7 +7,7 @@ defmodule RocketpayWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_rocketpay_key",
-    signing_salt: "ixlPXmnk"
+    signing_salt: "H266HK9r"
   ]
 
   socket "/socket", RocketpayWeb.UserSocket,
@@ -29,8 +29,6 @@ defmodule RocketpayWeb.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
-    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
-    plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
     plug Phoenix.Ecto.CheckRepoStatus, otp_app: :rocketpay
   end
